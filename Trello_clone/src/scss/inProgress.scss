@@ -1,0 +1,39 @@
+.todo__column-inProgress {
+    width: 350px;
+    border: 1px solid rgb(20, 113, 147);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #d8d7d7;
+    margin-bottom: 50px;
+}
+.inProgress {
+    background-color: #4a87a7;
+}
+.todo__inProgrerss-back, .todo__inProgrerss-complete {
+    width: 50px;
+    line-height: 20px;
+    font-size: 14px;
+    background-color: rgb(39, 116, 72);
+    border: none;
+    border-radius: 5px;
+    margin-right: 5px;
+    color: #FFF;
+}
+.todo__inProgrerss-back:hover, .todo__inProgrerss-back:focus {
+    background-color: rgb(30, 86, 54);
+}
+.todo__inProgrerss-back:active {
+    background-color: rgb(22, 63, 40);
+}
+.todo__inProgrerss-complete {
+    width: 70px;
+    background-color: rgb(190, 81, 31);
+    margin-right: 0;
+    padding: 2px;
+}
+.todo__inProgrerss-complete:hover, .todo__inProgrerss-complete:focus {
+    background-color: rgb(155, 66, 25);
+}
+.todo__inProgrerss-complete:active {
+    background-color: rgb(116, 50, 19);
+}

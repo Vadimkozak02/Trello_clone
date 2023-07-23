@@ -1,0 +1,36 @@
+.todo__done {
+    position: relative;
+    width: 350px;
+    border: 1px solid rgb(180, 113, 26);
+    border-radius: 10px;
+    overflow: hidden;
+    padding-bottom: 50px;
+    background-color: #d8d7d7;
+    margin-bottom: 50px;
+}
+.done {
+    background-color: #c1724e;
+}
+
+.done__btn-wrap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}   
+.done__btn-deleteAll {
+    width: 100%;
+    background-color: #c1724e;
+    line-height: 50px;
+    border: none;
+    color: #FFF;
+    font-size: 18px;
+    transition: .2s;
+    outline: none;
+}
+.done__btn-deleteAll:hover {
+    background-color: #a15937;
+}
+.done__btn-deleteAll:active {
+    background-color: #85492d;
+}

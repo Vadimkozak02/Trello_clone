@@ -1,0 +1,111 @@
+.modal__card {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    // scale: 0;
+    transition: .3s;
+}
+.modal__card.open {
+    visibility: visible;
+    // scale: 1;
+    opacity: 1;
+}
+.modal__card-wrap {
+    background-color: #d8d7d7;
+    width: 450px;
+    margin: auto;
+    border: 2px solid saddlebrown;
+    border-radius: 10px;
+    padding: 20px;
+}
+.modal__header-wrap {
+    margin-bottom: 15px;
+}
+.modal__header-title {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #c2c0c0;
+    transition: .3s;
+}
+.modal__header-title:focus {
+    box-shadow: 0px 1px 14px 1px rgba(34, 60, 80, 0.2);
+    background-color: #d9d9d9;
+}
+.modal__description-wrap {
+    margin-bottom: 15px;
+}
+.modal__description {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    word-wrap: break-word;
+    background-color: #c2c0c0;
+    transition: .3s;
+}
+.modal__description:focus, .modal__cancel-btn:focus, .modal__confirm-btn:focus {
+    box-shadow: 0px 1px 14px 1px rgba(34, 60, 80, 0.2);
+    background-color: #d9d9d9;
+}
+.modal__footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#modal-select {
+    width: 100px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 16px;
+    background-color: #c2c0c0;
+    transition: .3s;
+    outline: none;
+}
+#modal-select:focus {
+    box-shadow: 0px 1px 14px 1px rgba(34, 60, 80, 0.2);
+    background-color: #d9d9d9;
+}
+.modal__footer-btn {
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+.modal__cancel-btn, .modal__confirm-btn, .modal__edit-btn {
+    border: none;
+    width: 70px;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 30px;
+    background-color: #c2c0c0;
+    transition: .3s;
+    outline: none;
+}
+.modal__cancel-btn:hover, .modal__cancel-btn:focus {
+    background-color: #ca773b;
+}
+.modal__cancel-btn:active {
+    background-color: #945322;
+}
+.modal__confirm-btn:hover, .modal__edit-btn:hover, .modal__confirm-btn:focus, .modal__edit-btn:focus{
+    background-color: #388238;
+}
+.modal__confirm-btn:active{
+    background-color: #1f701f;
+}
+.modal__hidden {
+    display: none;
+}

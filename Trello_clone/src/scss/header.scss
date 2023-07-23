@@ -1,0 +1,27 @@
+.header {
+    margin: 0 auto 20px;
+    width: 1250px;
+    border: 2px solid rgb(79, 0, 128);
+    border-radius: 20px;
+    background-color: #9e68c0;
+}
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px auto;
+}
+.header__title {
+    font-size: 36px;
+    text-transform: capitalize;
+}
+.header__clock {
+    width: 70px;
+    background-color: #d9d7d7;;
+    text-align: center;
+    border-radius: 10px;
+}
+.header__clock p {
+    line-height: 30px;
+    font-size: 17px;
+}
