@@ -3,6 +3,7 @@ import { inProgrerssSetLocalStorage } from "./inProgressSetInLs";
 
 let arr = [];
 let progTodo = [];
+const progressCount = document.querySelector('.count__progress');
 function inProgressGetInLocalStorage() {
     let inProgressArr = JSON.parse(localStorage.getItem('inProgress'));
     
@@ -14,9 +15,12 @@ function inProgressGetInLocalStorage() {
             progTodo.push(progressArray[i]);
         }
         inProgrerssSetLocalStorage(progressArray);
+        // console.log('progTodo', progTodo);
     }
+    // inProgrerssSetLocalStorage(progressArray);
     arr = progTodo;
+    progressCount.innerHTML = arr.length;
 }
 inProgressGetInLocalStorage();
 
-export { inProgressGetInLocalStorage };
+export { inProgressGetInLocalStorage, arr };

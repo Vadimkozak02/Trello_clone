@@ -10,14 +10,14 @@ function deleteCard(element) {
         const target = event.target;
         const cardId = Number(target.closest('.todo__card').id);
         console.log(event.target.closest('.todo__card'));
-        // console.log(target.closest('.todo__card').id);
         target.closest('.todo__card').remove();
         for (let i = 0; i < startArray.length; i++) {
             if (startArray[i].id !== cardId) {
                 arr.push(startArray[i]);
             }
+            startLocalStorage(arr);
         }
-        startLocalStorage(arr);
+        // startLocalStorage(arr);
         startCount.innerHTML = arr.length;
     })
 }

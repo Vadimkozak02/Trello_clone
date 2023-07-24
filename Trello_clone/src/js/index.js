@@ -1,14 +1,15 @@
 import { createCard } from "./card/createCard";
-import { moveCard } from "./card/moveCard";
 import { addBtn } from "./card/modal";
 import { createBtn } from "./card/addCard";
 import { getusers } from "./getUsers";
 import { startGetInLs } from "./localStorage/startGetInLs";
 import { deleteCard } from "./card/deleteCard";
 import { editCard } from "./card/editCard";
+import { moveCard } from "./card/moveCard";
 import { createProgressCard } from "./card/createProgressCard";
 import { inProgressGetInLocalStorage } from "./localStorage/inProgressGetInLs";
 import { moveInDone } from "./card/moveInDone";
+import { deleteAllCards } from "./card/deleteAllCards";
 
 // Time in Header
 function clock() {

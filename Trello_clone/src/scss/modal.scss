@@ -9,12 +9,10 @@
     align-items: center;
     visibility: hidden;
     opacity: 0;
-    // scale: 0;
     transition: .3s;
 }
 .modal__card.open {
     visibility: visible;
-    // scale: 1;
     opacity: 1;
 }
 .modal__card-wrap {

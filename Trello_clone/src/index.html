@@ -22,9 +22,6 @@
                 <div class="modal__footer-wrap">
                     <select name="Select User" id="modal-select">
                         <option value="user1" selected>User list</option>
-                        <!-- <option value="user2">user2</option>
-                        <option value="user3">user3</option>
-                        <option value="user4">user4</option> -->
                     </select>
                     <div class="modal__footer-btn">
                         <button class="modal__cancel-btn">cancel</button>
@@ -34,7 +31,22 @@
                 </div>
             </div>
         </div>
-        <!-- Модальное окно на добавление карточки edn -->
+        <!-- Модальное окно на добавление карточки end -->
+
+        <!-- Модальное окно на предупреждение об удалении всех выполенных карточек start -->
+
+        <div class="modal__card-deleteAll">
+            <div class="deleteAll-wrapper">
+                <h3 class="deleteAll__text">Удалить все выполненные задачи?</h3>
+                <div class="deleteAll__btn-wrap">
+                    <button class="deleteAll__cancel">cancel</button>
+                    <button class="deleteAll__confirm">confirm</button>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Модальное окно на предупреждение об удалении всех выполенных карточек end -->
 
         <header class="header">
             <div class="container">
@@ -64,34 +76,6 @@
                             
                         </div>
 
-                        <!-- <div class="todo__card hidden">
-                            <div class="todo__header-wrap">
-                                <h3 class="todo__header-title">Title</h3>
-                                <div class="todo__btn-wrap">
-                                    <button class="todo__header-edit">Edit</button>
-                                    <button class="todo__header-delete">Delete</button>
-                                    <button class="todo__inProgrerss-back hidden">back</button>
-                                    <button class="todo__inProgrerss-complete hidden">complete</button>
-                                </div>
-                            </div>
-                            <div class="todo__description-wrap">
-                                <div class="todo__description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, vero?</p>
-                                </div>
-                                <button class="todo__description-button">
-                                    <div class="fa-solid fa-arrow-right"></div>
-                                </button>
-                            </div>
-                            <div class="todo__footer-wrap">
-                                <div class="todo__footer-user">
-                                    <p>User</p>
-                                </div>
-                                <div class="todo__footer-time">
-                                    <p>Time</p>
-                                </div>
-                            </div>
-                        </div> -->
-
                         <div class="start__btn-wrap">
                             <button class="start__add">Add todo</button>
                         </div>
@@ -105,7 +89,7 @@
                             <div class="card__header">
                                 <h2 class="card__title">In progress</h2>
                                 <div class="card__count">
-                                    <p>2</p>
+                                    <p class="count__progress">0</p>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +102,7 @@
                             <div class="card__header">
                                 <h2 class="card__title">done</h2>
                                 <div class="card__count">
-                                    <p>2</p>
+                                    <p class="count__done">0</p>
                                 </div>
                             </div>
                         </div>
