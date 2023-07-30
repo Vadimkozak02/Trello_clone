@@ -1,7 +1,6 @@
 import { deleteCard } from "./deleteCard";
 import { editCard } from "./editCard";
 import { moveCard } from "./moveCard";
-// import { inProgressGetInLocalStorage } from "../localStorage/inProgressGetInLs";
 
 export function createCard(id, title, description, user, date) {
     const cardList = document.querySelector('.card__list-start');
@@ -81,14 +80,12 @@ export function createCard(id, title, description, user, date) {
     cardList.append(card);
 
      // Находим кнопку -> и перемещаем в колону "inProgress"
-     moveCard(cardDescriptionBtn, backBtn, completeBtn, editBtn, deleteBtn);
+    moveCard(cardDescriptionBtn, backBtn, completeBtn, editBtn, deleteBtn);
 
     // Находим кнопку edit и редактируем выбранную карту
     editCard(editBtn);
 
     // находим кнопку delete и удаляем выбранную карту
     deleteCard(deleteBtn);
-
-   
 
 }

@@ -1,14 +1,13 @@
 import { doneSet } from "../localStorage/doneSet";
-import { doneSet } from "../localStorage/doneSet";
 import { inProgrerssSetLocalStorage } from "../localStorage/inProgressSetInLs";
-import { arr } from "../localStorage/doneGet";
+import { doneTodo } from "../localStorage/doneGet";
 import { deleteDoneCard } from "./deleteDoneCard";
 
 let test = [];
 let temp = '';
 
-if (arr !== null) {
-    test = arr;
+if (doneTodo !== null) {
+    test = doneTodo;
 } else {
     test = [];
 }
@@ -25,6 +24,7 @@ function moveInDone(element, backBtn, deleteBtn) {
 
         const target = event.target;
         const card = target.closest('.todo__card');
+        card.style.backgroundColor = '#c1724e';
         const cardId = Number(event.target.closest('.todo__card').id);
         doneList.prepend(card);
         
@@ -45,7 +45,8 @@ function moveInDone(element, backBtn, deleteBtn) {
         }
 
         deleteDoneCard(deleteBtn);
-        doneCount.innerHTML = progressArr.length;
+        doneCount.innerHTML = test.length;
+        progressCount.innerHTML = progressArr.length;
     })
     
 }

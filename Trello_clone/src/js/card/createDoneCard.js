@@ -4,7 +4,7 @@ function createDoneCard(id, title, description, user, date) {
     const doneList = document.querySelector('.todo__done-cardList');
 
     const card = document.createElement('div');
-    card.className = 'todo__card';
+    card.className = 'todo__card done__background';
     card.id = id;
     
     // Title

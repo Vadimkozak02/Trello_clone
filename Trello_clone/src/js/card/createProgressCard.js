@@ -1,10 +1,11 @@
 import { moveInDone } from "./moveInDone";
+import { backToTheStart } from "./backToTheStart";
 
 function createProgressCard(id, title, description, user, date) {
     const progressList = document.querySelector('.card__list-inProgress');
 
     const card = document.createElement('div');
-    card.className = 'todo__card';
+    card.className = 'todo__card progress__back';
     card.id = id;
     
     // Title
@@ -80,6 +81,8 @@ function createProgressCard(id, title, description, user, date) {
     // Находим кнопку complete и перемещаем дело в выполненные
     moveInDone(completeBtn, backBtn, deleteBtn);
 
+    // Возвращаем в начало
+    backToTheStart(backBtn, completeBtn, editBtn, deleteBtn, cardDescriptionBtn);
 }
 
 export { createProgressCard };

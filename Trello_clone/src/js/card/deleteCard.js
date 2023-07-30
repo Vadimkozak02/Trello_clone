@@ -1,4 +1,3 @@
-// const deleteBtn = document.querySelector('.todo__header-delete');
 import { startLocalStorage } from "../localStorage/startSetInLs";
 
 const startCount = document.querySelector('.count__start');
@@ -6,20 +5,40 @@ const startCount = document.querySelector('.count__start');
 function deleteCard(element) {
     element.addEventListener('click', (event) => {
         let arr = [];
-        const startArray = JSON.parse(localStorage.getItem('start'));
+        const startArray = JSON.parse(localStorage.getItem('start')) || [];
+        console.log('startArray', startArray);
         const target = event.target;
         const cardId = Number(target.closest('.todo__card').id);
-        console.log(event.target.closest('.todo__card'));
         target.closest('.todo__card').remove();
-        for (let i = 0; i < startArray.length; i++) {
-            if (startArray[i].id !== cardId) {
-                arr.push(startArray[i]);
-            }
-            startLocalStorage(arr);
-        }
-        // startLocalStorage(arr);
+        
+        arr = startArray.filter((elem) => elem.id !== cardId);
+        startLocalStorage(arr);
         startCount.innerHTML = arr.length;
     })
 }
 
 export { deleteCard };
+
+
+// --------------
+// Рабочий код:
+// import { startLocalStorage } from "../localStorage/startSetInLs";
+
+// const startCount = document.querySelector('.count__start');
+// let arr = [];
+
+// function deleteCard(element) {
+    
+//     element.addEventListener('click', (event) => {
+//         const startArray = JSON.parse(localStorage.getItem('start')) || [];
+//         const target = event.target;
+//         const cardId = Number(target.closest('.todo__card').id);
+//         target.closest('.todo__card').remove();
+
+//         arr = startArray.filter((elem) => elem.id !== cardId);
+//         startLocalStorage(arr);
+//         startCount.innerHTML = arr.length;
+//     })
+// }
+
+// export { deleteCard };

@@ -9,13 +9,13 @@
     align-items: center;
     visibility: hidden;
     opacity: 0;
-    transition: .3s;
+    transition: .5s;
 }
 .modal__card-deleteAll.open {
     visibility: visible;
     opacity: 1;
 }
-.deleteAll-wrapper {
+.deleteAll__wrapper {
     background-color: #d8d7d7;
     width: 350px;
     margin: auto;
@@ -45,9 +45,19 @@
     transition: .3s;
     outline: none;
 }
+.deleteAll__cancel:hover, .deleteAll__cancel:focus {
+    background-color: rgb(156, 43, 43);
+    color: #FFF;
+}
+.deleteAll__cancel:active {
+    background-color: rgb(119, 41, 41);
+    color: #FFF;
+}
 .deleteAll__confirm:hover, .deleteAll__confirm:focus {
-    background-color: rgb(136, 37, 37);
+    background-color: rgb(48, 127, 48);
+    color: #FFF;
 }
 .deleteAll__confirm:active {
-    background-color: rgb(136, 37, 37);
+    background-color: rgb(34, 91, 34);
+    color: #FFF;
 }

@@ -9,12 +9,9 @@ function deleteDoneCard(element) {
         const target = event.target;
         const cardId = Number(target.closest('.todo__card').id);
         target.closest('.todo__card').remove();
-        doneArray.forEach((elem) => {
-            if (elem.id !== cardId) {
-                arr.push(elem);
-            }
-            doneSet(arr);
-        })
+        
+        arr = doneArray.filter((elem) => elem.id !== cardId);
+        doneSet(arr);
         doneCount.innerHTML = arr.length;
     })
 }

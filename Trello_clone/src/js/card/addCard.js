@@ -9,17 +9,10 @@ const modalTitle = document.querySelector('.modal__header-title');
 const modalDesc = document.querySelector('.modal__description');
 const modalUser = document.querySelector('#modal-select');
 const startCount = document.querySelector('.count__start');
-let startArray = [];
-
-if (startTodo !== null) {
-    startArray = startTodo;
-} else {
-    startArray = [];
-}
 
 function addCard () {
     createBtn.addEventListener('click', () => {
-        const temp = {};
+        
         const title = modalTitle.value;
         const description = modalDesc.value;
         const user = modalUser.value;
@@ -33,6 +26,7 @@ function addCard () {
             minute: '2-digit', 
         };
         const date = time.toLocaleDateString(undefined, options);
+        const temp = {};
         temp.id = randomId;
         temp.title = title;
         temp.description = description;
@@ -47,9 +41,9 @@ function addCard () {
         else {
             modal.classList.remove('open');
             createCard(randomId, title, description, user, date);
-            startArray.push(temp);
-            startLocalStorage(startArray);
-            startCount.innerHTML = startArray.length;
+            startTodo.push(temp);
+            startLocalStorage(startTodo);
+            startCount.innerHTML = startTodo.length;
             modalTitle.value = '';
             modalDesc.value = '';
             modalUser.value = 'user1';
@@ -59,4 +53,4 @@ function addCard () {
 }
 addCard();
 
-export { addCard };
+export { addCard, startTodo };
