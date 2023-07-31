@@ -6,19 +6,34 @@
     overflow: hidden;
     padding-bottom: 50px;
     background-color: #d8d7d7;
-    margin-bottom: 50px;
+    // margin-bottom: 50px;
+    margin: 0 10px 50px 0;
+
+    @media (max-width: 1200px) {
+        max-width: 300px;
+    }
+    @media (max-width: 767px) {
+        max-width: 350px;
+    }
+    @media (max-width: 566px) {
+        max-width: 90%;
+    }
 }
 .card__header-wrap {
     width: 100%;
     background-color: #54a770;
 }
 .card__header {
-    width: 250px;
+    max-width: 250px;
     margin: 0 auto 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     line-height: 50px;
+
+    @media (max-width: 566px) {
+        padding: 0 10px;
+    }
 }
 .card__title {
     text-transform: uppercase;
@@ -29,8 +44,11 @@
     font-size: 17px;
     color: #FFF;
 }
+.card__list-start {
+    padding: 0 5px;
+}
 .todo__card {
-    width: 320px;
+    max-width: 320px;
     margin: 10px auto;
     border: 1px solid rgb(82, 90, 85);
     border-radius: 10px;
@@ -81,7 +99,7 @@
     background-color: rgb(144, 59, 23);
 }
 .todo__description-wrap {
-    width: 300px;
+    max-width: 300px;
     margin: 0 auto 10px;
     display: flex;
     justify-content: space-between;

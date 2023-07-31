@@ -7,6 +7,16 @@
     padding-bottom: 50px;
     background-color: #d8d7d7;
     margin-bottom: 50px;
+    
+    @media (max-width: 1200px) {
+        max-width: 300px;
+    }
+    @media (max-width: 767px) {
+        max-width: 350px;
+    }
+    @media (max-width: 566px) {
+        max-width: 90%;
+    }
 }
 .done__background {
     background-color: #c1724e;
@@ -36,4 +46,7 @@
 }
 .done__btn-deleteAll:active {
     background-color: #85492d;
+}
+.todo__done-cardList {
+    padding: 0 5px;
 }
