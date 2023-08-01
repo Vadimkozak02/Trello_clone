@@ -1,7 +1,7 @@
 import { createCard } from "../card/createCard";
 
 const startCount = document.querySelector('.count__start');
-let startTodo = JSON.parse(localStorage.getItem('start')) || [];
+startTodo = JSON.parse(localStorage.getItem('start')) || [];
 // По времени 44:11 добавление из LS
 
 function startGetInLs () {

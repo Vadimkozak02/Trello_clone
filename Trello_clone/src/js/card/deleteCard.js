@@ -6,7 +6,6 @@ function deleteCard(element) {
     element.addEventListener('click', (event) => {
         let arr = [];
         const startArray = JSON.parse(localStorage.getItem('start')) || [];
-        console.log('startArray', startArray);
         const target = event.target;
         const cardId = Number(target.closest('.todo__card').id);
         target.closest('.todo__card').remove();

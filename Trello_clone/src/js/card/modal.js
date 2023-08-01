@@ -17,6 +17,13 @@ addBtn.addEventListener('click', () => {
     modalTitle.value = '';
     modalDesc.value = '';
     modalUser.value = 'user1';
+
+    // let a = [{id:'1', name: 'Vadim'}, {id: '2', name: 'Vika'}];
+    // let b = [{id: '1', name: 'Vadim'}];
+
+    // let c = a.filter(elem => b.every(item => item.id !== elem.id));
+    // console.log('c', c);
+
 })
 modalClose.addEventListener('click', () => {
     modal.classList.remove('open');
