@@ -6,6 +6,7 @@ import { deleteDoneCard } from "./deleteDoneCard";
 let test = [];
 let temp = '';
 let testArr = [];
+let arr = [];
 
 if (doneTodo !== null) {
     test = doneTodo;
@@ -38,13 +39,14 @@ function moveInDone(element, backBtn, deleteBtn) {
                     temp = elem.id;
                 }
             })
-            doneSet(test);
-            let indexOfArray = progressArr.findIndex((elem) => {
-                return elem.id === temp;
-            })
-            progressArr.splice(indexOfArray, 1);
-            inProgrerssSetLocalStorage(progressArr);
         }
+        doneSet(test);
+        
+        let indexOfArray = progressArr.findIndex((elem) => {
+            return elem.id === temp;
+        })
+        progressArr.splice(indexOfArray, 1);
+        inProgrerssSetLocalStorage(progressArr);
 
         deleteDoneCard(deleteBtn);
         doneCount.innerHTML = test.length;
@@ -68,6 +70,7 @@ export { moveInDone };
 // let test = [];
 // let temp = '';
 // let testArr = [];
+// let arr = [];
 
 // if (doneTodo !== null) {
 //     test = doneTodo;
@@ -101,6 +104,7 @@ export { moveInDone };
 //                 }
 //             })
 //             doneSet(test);
+
 //             let indexOfArray = progressArr.findIndex((elem) => {
 //                 return elem.id === temp;
 //             })
