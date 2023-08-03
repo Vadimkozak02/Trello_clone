@@ -37,40 +37,19 @@ function backToTheStart(element, completeBtn, editBtn, deleteBtn, arrow) {
             }
         })
         startLocalStorage(startArr);
-
-        if (startArr) {
-            testArr = progressArr.filter(elem => startArr.every(item => item.id !== elem.id));
-        } else {
-            testArr = progressArr;
-        }
-        let unique = progressArr.filter((item) => checkUnique(item));
-        console.log('unique', unique);
-        inProgrerssSetLocalStorage(testArr);
-
-        let d = new Set(progressArr);
-        console.log('d', d);
         
 
-        // let indexOfArray = progressArr.findIndex((elem) => {
-        //     return elem.id === temp;
-        // })
-        // progressArr.splice(indexOfArray, 1);
-        // inProgrerssSetLocalStorage(progressArr);
+        let indexOfArray = progressArr.findIndex((elem) => {
+            return elem.id === temp;
+        })
+        progressArr.splice(indexOfArray, 1);
+        inProgrerssSetLocalStorage(progressArr);
 
         startCount.innerHTML = startArr.length;
         progressCount.innerHTML = testArr.length;
 
     })
 
-}
-
-let c = [];
-function checkUnique(item) {
-    if (c.indexOf(item.id) === -1) {
-        c.push(item.id);
-        return true;
-    }
-    return false;
 }
 
 export { backToTheStart };
